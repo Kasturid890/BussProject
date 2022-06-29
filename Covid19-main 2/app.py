@@ -18,7 +18,7 @@ def predict():
    df3= pd.read_csv('df3.csv')
    future = model.make_future_dataframe(periods=len(df3[5:]))
    forecast =model.predict(future)
-   preds=forecast[['yhat']]
+   preds=forecast['yhat']
    
    
    output = round(preds)
